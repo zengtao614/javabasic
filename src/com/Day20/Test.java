@@ -14,7 +14,6 @@ public class Test {
         //边读边写
         inputAndoutputTest();
 
-
     }
 
     private static void inputAndoutputTest() throws IOException {

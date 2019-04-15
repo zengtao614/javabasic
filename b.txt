@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="referrer" content="origin" />
+    <title>BufferedReader的ready与readLine使用，以及Premature EOF异常 - foreyou - 博客园</title>
+<meta property="og:description" content="我的个人主页：http://www.foreyou.net 有些人在读取服务器端返回的数据的时候，使用了BufferedReader类的ready:1 while(reader.ready()) {2" />
+    <link type="text/css" rel="stylesheet" href="/bundles/blog-common.css?v=svlZeZMvc3He7PqOD4T7SOuQn0_kIfLBYiy3idqd35Y1"/>
+<link id="MainCss" type="text/css" rel="stylesheet" href="/skins/BlackLowKey/bundle-BlackLowKey.css?v=porUb1GRMsPCuLZTJKjoDyrJre6Y7-Oiq-zx-_VcGG81"/>
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/BlackLowKey/bundle-BlackLowKey-mobile.css?v=Go8Bj0ZU9gZXuPSKWcSQabps3E1njgJKYz4DiOq6-N41"/>
+    <link title="RSS" type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/forzhongyou/rss"/>
+    <link title="RSD" type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/forzhongyou/rsd.xml"/>
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/forzhongyou/wlwmanifest.xml"/>
+    <script src="//common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script>var currentBlogId=194430;var currentBlogApp='forzhongyou',cb_enable_mathjax=true;var isLogined=false;</script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: { 
+            equationNumbers: { autoNumber: ['AMS'], useLabelIds: true }, 
+            extensions: ['extpfeil.js'],
+            Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script><script src="//mathjax.cnblogs.com/2_7_2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="/bundles/blog-common.js?v=OFBZTzkHKauV7mtIFLF9jlqrX-sesK9-mY9KjurLrq01" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="https://www.cnblogs.com/forzhongyou/"><img id="blogLogo" src="/Skins/custom/images/logo.gif" alt="返回主页" /></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="https://www.cnblogs.com/forzhongyou/">foreyou (www.foreyou.net)</a></h1>
+<h2>不积跬步无以至千里，不积小流无以成江海。</h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">博客园</a></li>
+<li><a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/forzhongyou/">首页</a></li>
+<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+<li><a id="blog_nav_contact" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/foreyou">联系</a></li>
+<li><a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/forzhongyou/rss">订阅</a>
+<!--<a id="blog_nav_rss_image" class="aHeaderXML" href="https://www.cnblogs.com/forzhongyou/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="订阅" /></a>--></li>
+<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+</ul>
+		<div class="blogStats">
+			
+			<div id="blog_stats">
+<span id="stats_post_count">随笔 - 15&nbsp; </span>
+<span id="stats_article_count">文章 - 0&nbsp; </span>
+<span id="stats-comment_count">评论 - 1</span>
+</div>
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+        <div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class = "post">
+		<h1 class = "postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/forzhongyou/p/3902765.html">BufferedReader的ready与readLine使用，以及Premature EOF异常</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="blogpost-body"><p>我的个人主页：<a href="http://www.foreyou.net" target="_blank">http://www.foreyou.net</a></p>
+<p>　　有些人在读取服务器端返回的数据的时候，使用了BufferedReader类的ready:</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080;">1</span> <span style="color: #0000ff;">while</span><span style="color: #000000;">(reader.ready()) {
+</span><span style="color: #008080;">2</span>  <span style="color: #008000;">//</span><span style="color: #008000;">执行读取操作，即readLine </span>
+<span style="color: #008080;">3</span> }</pre>
+</div>
+<p>　　这个方法很经常被用到， 但是返回的却都是空，这是什么原因呢，查看了一下帮助文档，以及上网查了查，总结如下:</p>
+<p>　　1. ready是查看流是否已经准备好被读，是一个非阻塞的方法，所以会立刻返回，由于服务器没有准备好被读，所以会立刻返回，所以读取到的都是null。</p>
+<p>　　2. readLine是一个阻塞的方法，只要没有断开连接，就会一直等待，直到有东西返回，那么什么时候返回空呢，只有读到数据流最末尾，才返回null。</p>
+<p>　　以上摘自：<a href="http://blog.csdn.net/neusoftware_20063500/article/details/3723176">http://blog.csdn.net/neusoftware_20063500/article/details/3723176</a></p>
+<p>　　实际上，在读网络数据的时候经常会遇到数据延迟等问题。</p>
+<p>这时就可以使用 ready函数查看BufferedReader是否已经准备好。</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">while</span>(!reader.ready){ <span style="color: #008000;">//</span><span style="color: #008000;">阻塞，等待一段时间 } </span>
+<span style="color: #0000ff;">while</span>(reader.readLine()!==<span style="color: #0000ff;">null</span>){ <span style="color: #008000;">//</span><span style="color: #008000;">执行操作 }</span></pre>
+</div>
+<p>　　特别要注意的是当reader.readLine已经读完之后，如果继续执行ready操作，会返回false; 因此，下面两段代码可能造成死循环：</p>
+<p>　　1.&nbsp;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">while</span>(reader.readLine()!==<span style="color: #0000ff;">null</span><span style="color: #000000;">){
+      </span><span style="color: #008000;">//</span><span style="color: #008000;">执行操作  </span>
+     <span style="color: #0000ff;">while</span>(!<span style="color: #000000;">reader.ready){  
+     </span><span style="color: #008000;">//</span><span style="color: #008000;">阻塞，等待一段时间   </span>
+<span style="color: #000000;">    }  
+}</span></pre>
+</div>
+<p>2.&nbsp;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">while</span>(reader.readLine()!==<span style="color: #0000ff;">null</span><span style="color: #000000;">){
+  </span><span style="color: #008000;">//</span><span style="color: #008000;">执行操作</span>
+<span style="color: #000000;">  }  
+</span><span style="color: #0000ff;">while</span>(!<span style="color: #000000;">reader.ready){
+  </span><span style="color: #008000;">//</span><span style="color: #008000;">阻塞，等待一段时间  </span>
+}</pre>
+</div>
+<p><strong>&nbsp;Premature EOF</strong></p>
+<p>在读取网络流的数据时很容易遇到 java.io.IOException: Premature EOF的异常。</p>
+<p>　　发生Premature EOF的可能有：<br />　　1. 在stream到达EOF之前，stream已经结束。( no EOF marker)，显然这种情况下很有可能是响应超时、服务端处理错误、网络问题、防火墙。<br />　　2. EOF过早地出现了。( EOF marker comes earlier before it shoud be.)</p>
+<p>目前，没有找到很好的有效的解决方法。因为，这个问题出现的原因有很多。有些是客户端问题，这种问题可以通过改善良好的代码习惯来杜绝。比如，要记住关闭流以及网络连接，合理使用网络和计算机资源。在读取网络流之前可以试探流是否已经准备好。</p>
+<p>　　本人也遇到过Premature EOF的问题，最开始这个问题很令人头疼。当时是一个多线程的程序（而且线程数相对较多，10个），虽然对于一些线程返回的结果正常，然而也有一大部分的Premature EOF异常。为此，我检查了一遍又一遍的代码，上网找了许多潜在的解决方法，但均没有很好地解决问题。</p>
+<p>　　考虑到这个异常有可能是服务器端的错误，以及我当时所调用的服务器的资源情况，最后我将线程数设置为2个这种异常便不再出现了。<span style="color: #ff0000;"><strong>因此，可以猜测到程序的多线程调用造成了服务端程序的资源争抢等问题导致了Premature EOF异常。</strong></span>所以，在开发应用程序的过程中也应该注意到合理使用服务器的资源。</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		</div>
+		<div class = "postDesc">posted @ <span id="post-date">2014-08-10 13:50</span> <a href='https://www.cnblogs.com/forzhongyou/'>foreyou</a> 阅读(<span id="post_view_count">...</span>) 评论(<span id="post_comment_count">...</span>)  <a href ="https://i.cnblogs.com/EditPosts.aspx?postid=3902765" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(3902765);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=194430,cb_entryId=3902765,cb_blogApp=currentBlogApp,cb_blogUserGuid='e5f3101f-3a20-e411-8d02-90b11c0b17d6',cb_entryCreatedDate='2014/8/10 13:50:00';loadViewCount(cb_entryId);var cb_postType=1;var isMarkdown=false;</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id='comment_form' class='commentform'>
+<a name='commentform'></a>
+<div id='divCommentShow'></div>
+<div id='comment_nav'><span id='span_refresh_tips'></span><a href='javascript:void(0);' onclick='return RefreshCommentList();' id='lnk_RefreshComments' runat='server' clientidmode='Static'>刷新评论</a><a href='#' onclick='return RefreshPage();'>刷新页面</a><a href='#top'>返回顶部</a></div>
+<div id='comment_form_container'></div>
+<div class='ad_text_commentbox' id='ad_text_under_commentbox'></div>
+<div id='ad_t2'></div>
+<div id='opt_under_post'></div>
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+<script>
+  googletag.cmd.push(function() {
+        googletag.defineSlot('/1090369/C1', [300, 250], 'div-gpt-ad-1546353474406-0').addService(googletag.pubads());
+        googletag.defineSlot('/1090369/C2', [468, 60], 'div-gpt-ad-1539008685004-0').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+  });
+</script>
+<div id='cnblogs_c1' class='c_ad_block'>
+    <div id='div-gpt-ad-1546353474406-0' style='height:250px; width:300px;'></div>
+</div>
+<div id='under_post_news'></div>
+<div id='cnblogs_c2' class='c_ad_block'>
+    <div id='div-gpt-ad-1539008685004-0' style='height:60px; width:468px;'></div>
+</div>
+<div id='under_post_kb'></div>
+<div id='HistoryToday' class='c_ad_block'></div>
+<script type='text/javascript'>
+ if(enablePostBottom()) {
+    codeHighlight();
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverT2();
+    deliverC1();
+    deliverC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);  
+}
+</script>
+</div>
+
+    
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright &copy;2019 foreyou
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+</body>
+</html>
