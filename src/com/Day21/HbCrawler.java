@@ -51,7 +51,7 @@ public class HbCrawler {
         for (String imgsrc:imgsrcs){
             try{
                 String imgName = imgsrc.substring(imgsrc.lastIndexOf("/"))+".jpg";
-                String folderName = "src/img";
+                String folderName = "C:\\Users\\曾涛\\Desktop\\新建文件夹\\";
                 URL uri = new URL(imgsrc);
                 InputStream is = uri.openStream();
                 FileOutputStream fos = new FileOutputStream(folderName+imgName);

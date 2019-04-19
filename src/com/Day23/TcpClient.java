@@ -6,7 +6,7 @@ import java.net.Socket;
 
 public class TcpClient {
     public static void main(String[] args) throws Exception {
-        Socket socket = new Socket("localhost", 9999);
+        Socket socket = new Socket("70.1.1.161", 666);
         OutputStream outputStream = socket.getOutputStream();
         outputStream.write("你好".getBytes());
 
