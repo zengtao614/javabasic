@@ -1,6 +1,8 @@
 package com.work;
 
+import java.lang.reflect.Array;
 import java.util.*;
+import java.util.function.DoubleBinaryOperator;
 
 /**
  * CreateDate:2019.4.16
@@ -11,7 +13,7 @@ public class Test1 {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-
+        task9();
     }
 
     public static void task1() {
@@ -129,9 +131,71 @@ public class Test1 {
          * 8、编程实现迷你计算器功能，
          * 支持“+”“-”“*”“/”，从控制台输入两个操作数，输出运算结果。
          */
+        System.out.println("请输入第一个操作数:");
+        if (!scanner.hasNextDouble()) {
+            System.out.println("输入错误");
+            System.exit(1);
+        }
+        double a = scanner.nextDouble();
+        System.out.println("请输入第二个操作数:");
+        if (!scanner.hasNextDouble()) {
+            System.out.println("输入错误");
+            System.exit(1);
+        }
+        double b = scanner.nextDouble();
+        System.out.println("请输入运算符:");
+        switch (scanner.next()) {
+            case "+":
+                System.out.println(a + b);
+                break;
+            case "-":
+                System.out.println(a - b);
+                break;
+            case "*":
+                System.out.println(a * b);
+                break;
+            case "/":
+                System.out.println(a / b);
+                break;
+
+        }
 
     }
 
+    public static void task9() {
+        /**
+         * 9、小明左手、右手中分别拿两张纸牌：
+         * 黑桃10和红桃8，现在交换手中的牌。用程序模拟这一过程：两个整数分别保存在两个变量中，
+         * 将这两个变量的值呼唤，并输出互换后的结果。程序运行结果如图：
+         */
+        int left = 10;
+        int right = 8;
+        int temp;
+        temp = left;
+        left = right;
+        right = temp;
+        System.out.println("左手:" + left + ",右手:" + right);
+    }
+
+    public static void task10(){
+        /**
+         *
+         */
+    }
+
+    public static void task31() {
+        ArrayList list = new ArrayList();
+        list.add(new Good("橡皮擦"));
+    }
+
+}
+
+class Good {
+    private String name;
+
+    public Good(String name) {
+        this.name = name;
+    }
 }
 
 class Util {

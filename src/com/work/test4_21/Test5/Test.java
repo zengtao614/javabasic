@@ -2,6 +2,7 @@ package com.work.test4_21.Test5;
 
 import java.util.*;
 
+
 public class Test {
     /**
      * 5、集合
@@ -41,7 +42,7 @@ public class Test {
             String itemName = iterator.next();
             System.out.println(itemName);
             if (hashMap.containsKey(itemName)) {
-                hashMap.replace(itemName, Integer.valueOf(hashMap.get(itemName).intValue() + 1));
+                hashMap.replace(itemName, hashMap.get(itemName).intValue() + 1);
             } else {
                 hashMap.put(itemName, 1);
             }
