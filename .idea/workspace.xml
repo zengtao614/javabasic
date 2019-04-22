@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56efdecb-3e9e-4775-b752-4cb020c9ea62" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/work/test4_22/Test1/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/work/test4_22/Test2/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/work/test4_22/Test3/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/work/test4_22/Test4/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/work/test4_22/Test4/Elephant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/work/test4_22/Test4/Lion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/work/test4_22/Test4/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/work/test4_22/Test4/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/work/test4_22/Test5/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/work/test4_22/Test5/a.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/work/test4_22/a.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/work/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/work/Test1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/work/test4_21/Test5/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/work/test4_21/Test5/Test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,34 +58,34 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="java" value="119" />
+          <entry key="java" value="121" />
           <entry key="jpg" value="22" />
           <entry key="md" value="4" />
           <entry key="png" value="14" />
-          <entry key="txt" value="47" />
+          <entry key="txt" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="36" />
-          <entry key="JAVA" value="119" />
+          <entry key="JAVA" value="121" />
           <entry key="Markdown" value="4" />
-          <entry key="PLAIN_TEXT" value="48" />
+          <entry key="PLAIN_TEXT" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="45" />
-          <entry key="java" value="23458" />
+          <entry key="java" value="23547" />
           <entry key="md" value="224" />
-          <entry key="txt" value="210" />
+          <entry key="txt" value="220" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="23458" />
+          <entry key="JAVA" value="23547" />
           <entry key="Markdown" value="224" />
-          <entry key="PLAIN_TEXT" value="255" />
+          <entry key="PLAIN_TEXT" value="265" />
         </counts>
       </usages-collector>
     </session>
@@ -87,25 +96,47 @@
         <entry file="file://$PROJECT_DIR$/src/com/work/test4_22/a.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="28" selection-start-column="28" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/work/test4_22/Test5/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="858">
-              <caret line="33" column="54" lean-forward="true" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
+              <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/work/test4_22/Test5/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/work/test4_22/Test2/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="780">
+              <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/work/test4_22/Test4/Lion.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="67">
+              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+              <folding>
+                <element signature="e#235#236#0" expanded="true" />
+                <element signature="e#277#278#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/work/test4_21/Test5/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="50" column="48" lean-forward="true" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+            <state relative-caret-position="130">
+              <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -167,15 +198,15 @@
         <option value="$PROJECT_DIR$/src/com/work/Test1.java" />
         <option value="$PROJECT_DIR$/src/com/Day22/sell_ticket/Ticket.java" />
         <option value="$PROJECT_DIR$/src/com/work/test4_22/Test1/Test.java" />
-        <option value="$PROJECT_DIR$/src/com/work/test4_22/Test2/Test.java" />
         <option value="$PROJECT_DIR$/src/com/work/test4_21/Test5/Test.java" />
         <option value="$PROJECT_DIR$/src/com/work/test4_22/Test3/Test.java" />
         <option value="$PROJECT_DIR$/src/com/work/test4_22/Test4/Manager.java" />
         <option value="$PROJECT_DIR$/src/com/work/test4_22/Test4/Animal.java" />
         <option value="$PROJECT_DIR$/src/com/work/test4_22/Test4/Elephant.java" />
-        <option value="$PROJECT_DIR$/src/com/work/test4_22/Test4/Lion.java" />
         <option value="$PROJECT_DIR$/src/com/work/test4_22/Test4/Test.java" />
         <option value="$PROJECT_DIR$/src/com/work/test4_22/a.txt" />
+        <option value="$PROJECT_DIR$/src/com/work/test4_22/Test4/Lion.java" />
+        <option value="$PROJECT_DIR$/src/com/work/test4_22/Test2/Test.java" />
         <option value="$PROJECT_DIR$/src/com/work/test4_22/Test5/Test.java" />
       </list>
     </option>
@@ -293,7 +324,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555918725467" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555931508284" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="D:/offical/Java/jar包集合/commons-io-2.6-sources.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -402,9 +433,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Test (4)" />
+        <item itemvalue="Application.Test (1)" />
         <item itemvalue="Application.Test (3)" />
         <item itemvalue="Application.Test (2)" />
-        <item itemvalue="Application.Test (1)" />
         <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
@@ -433,7 +464,7 @@
       <workItem from="1555805335321" duration="22214000" />
       <workItem from="1555837297379" duration="5738000" />
       <workItem from="1555891785862" duration="7095000" />
-      <workItem from="1555911258917" duration="5685000" />
+      <workItem from="1555911258917" duration="12100000" />
     </task>
     <task id="LOCAL-00001" summary="Day24学习三种设计模式(1.适配器模型;2.工厂模型3.单例模型)和GUI编程">
       <created>1555666151599</created>
@@ -477,16 +508,24 @@
       <option name="project" value="LOCAL" />
       <updated>1555819229401</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="补充和完成">
+      <created>1555918931929</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1555918931929</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198935000" />
+    <option name="totallyTimeSpent" value="205350000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1323752" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1323752" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -495,7 +534,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3279483" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" visible="true" weight="0.15831988" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4977307" visible="true" weight="0.09693053" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.02746365" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -556,7 +595,8 @@
     <MESSAGE value="Day24(三个模型+GUI)文件的补全" />
     <MESSAGE value="Day24(三个模型+GUI)课堂案例的完成" />
     <MESSAGE value="2019.4.21模拟考试" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019.4.21模拟考试" />
+    <MESSAGE value="补充和完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="补充和完成" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -765,6 +805,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-130">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#373#374#0" expanded="true" />
+            <element signature="method#task2#0;class#Test1#0" />
+            <element signature="method#task3#0;class#Test1#0" />
+            <element signature="method#task4#0;class#Test1#0" />
+            <element signature="method#task5#0;class#Test1#0" />
+            <element signature="method#task6#0;class#Test1#0" />
+            <element signature="method#task7#0;class#Test1#0" />
+            <element signature="method#task8#0;class#Test1#0" />
+            <element signature="method#task9#0;class#Test1#0" />
+            <element signature="method#task31#0;class#Test1#0" />
+            <element signature="class#Good#0" />
+            <element signature="class#Util#0" />
+            <element signature="docComment;method#is_leap_year#0;class#Util#0" />
+            <element signature="method#is_leap_year#0;class#Util#0" />
+            <element signature="docComment;method#isDaffodil_number#0;class#Util#0" />
+            <element signature="method#isDaffodil_number#0;class#Util#0" />
+            <element signature="docComment;method#Fibonacci_sequence#0;class#Util#0" />
+            <element signature="method#Fibonacci_sequence#0;class#Util#0" />
+            <element signature="class#Bicyle#0" />
+            <element signature="class#Electric_bike#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -809,13 +873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/work/test4_22/Test2/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/work/test4_22/Test3/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="844">
@@ -830,19 +887,6 @@
             <element signature="e#813#814#0" expanded="true" />
             <element signature="e#848#849#0" expanded="true" />
             <element signature="e#878#879#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/work/test4_22/Test4/Lion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="e#126#127#0" expanded="true" />
-            <element signature="e#168#169#0" expanded="true" />
-            <element signature="e#104#105#0" expanded="true" />
-            <element signature="e#140#141#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -912,24 +956,42 @@
     <entry file="file://$PROJECT_DIR$/src/com/work/test4_22/Test5/a.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/work/test4_21/Test5/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/work/test4_22/a.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="28" selection-start-column="28" selection-end-column="28" />
+          <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/work/test4_22/Test4/Lion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding>
+            <element signature="e#235#236#0" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/work/test4_22/Test2/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/work/test4_22/Test5/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="33" column="54" lean-forward="true" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/work/test4_21/Test5/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="50" column="48" lean-forward="true" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+        <state relative-caret-position="313">
+          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
         </state>
       </provider>
     </entry>
